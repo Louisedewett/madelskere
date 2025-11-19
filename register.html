@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/burger.css" />
   <link rel="stylesheet" href="css/cards.css" />
-  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/forms.css" />
   <link rel="icon" type="image/png" href="img/fav.png" />
   <title>Emergency Site</title>
 </head>
@@ -21,11 +21,13 @@
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"><img src="overskift_2.svg" alt=""></a>
       </div>
       <ul class="menu">
-        <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-        <li><a class="menuItem" href="register.html">Indberet</a></li>
+        <button id="toggle">Knap</button>
+
+        <li><a class="menuItem" href="instruction.html">De tre råd </a></li>
+        <li><a class="menuItem" href="register.html">Få hjælp her </a></li>
       </ul>
       <button class="burger">
         <span class="line"></span>
@@ -39,46 +41,162 @@
     <h1>INDBERET</h1>
     <section id="form-section">
       <article id="form-info">
-        <h2>Overskrift</h2>
-        <p>Tekst</p>
+        <h2 class="overskrift1">Hvor skal jeg tage hen og spise?</h2>
+        <p class="tekst1">Hangry-alarmen har meldt sig - jeg hjælper dig med at slukke din sult
+        </p>
       </article>
-      <form id="webform"></form>
+      <form id="webform">
+        <fieldset class="fieldsetalle">
+          <div class="group">
+            <div class="form-group">
+              <label for="f_name"></label>
+              <input id="f_name" type="text" name="first_name" placeholder="Dit fornavn" aria-describedby="fname-error"
+                required>
+              <p class="error-message" id="fname-error">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="E_name"></label>
+              <input id="E_name" type="text" name="last_name" placeholder="Dit efternavn" aria-describedby="fname-error"
+                required>
+              <p class="error-message" id="fname-error">Please enter a value</p>
+            </div>
+
+            <div class="form-group">
+              <label for="telefonnummer"></label>
+              <input id="telefonnummer" type="text" name="mobile" placeholder="Dit telefonnummer"
+                aria-describedby="fname-error" required>
+              <p class="error-message" id="fname-error">Please enter a value</p>
+            </div>
+
+
+
+          </div>
+        </fieldset>
+
+
+
+
+
+        <h4>Vælg det mad du har i tankerne:</h4>
+        <fieldset class="fieldsetalle">
+          <div class="group2">
+            <label for="kategori"></label>
+            <select name="mad" id="kategori">
+              <option value="">Vælg madkategori</option>
+              <option value="Italiensk">Italiensk</option>
+              <option value="Mexikansk">Mexikansk</option>
+              <option value="Asiatisk">Asiatisk</option>
+              <option value="Amerikansk">Amerikansk</option>
+              <option value="Indisk">Indisk</option>
+              <option value="Mellemøstisk">Mellemøstisk</option>
+              <option value="Nordisk">Nordisk</option>
+              <option value="Andet">Andet</option>
+
+            </select>
+
+          </div>
+          <div class="form-group andet">
+            <label for="andet">Navn på ny madkategori:</label>
+            <input id="andet" type="text" name="andet" placeholder="Skriv her">
+          </div>
+        </fieldset>
+
+
+
+        <fieldset class="fieldsetalle">
+          <div>
+            <h2 class="skrift">Prisniveau:</h2>
+          </div>
+          <div class="firecheckbox">
+
+            <label for="id1">
+              <input type="checkbox" id="id1" name="vælg">
+              Budget under 100 kr.</label>
+            <label for="id2">
+              <input type="checkbox" id="id2" name="vælg">
+              Mellemklasse 100-250 kr.</label>
+            <label for="id3">
+              <input type="checkbox" id="id3" name="vælg">
+              Luksus over 250 kr.</label>
+            <label for="id4">
+              <input type="checkbox" id="id4" name="vælg">
+              "Jeg skal bare spise NU"</label>
+          </div>
+        </fieldset>
+
+
+
+
+        <fieldset class="fieldsetalle">
+          <h2 class="placeringskrift">Placering:</h2>
+          <label for="placering">Skriv her hvor du er placeret?</label>
+          <textarea name="beskriv" type="text" id="placering" required></textarea>
+
+        </fieldset>
+        <div class="form-group">
+          <label for="accept_terms">
+            <input type="checkbox" id="accept_terms" name="accept_terms" value="yes" aria-describedby="terms-error"
+              required />
+            Accept terms
+          </label>
+          <p class="error-message" id="terms-error">Please tick the box</p>
+        </div>
+
+        <button type="submit" class="knap">INDSEND</button>
+
+
+
+      </form>
     </section>
     <section id="form-summary">
       <h2>Summary</h2>
-      <article>
-        <p class="placeholder">Opsummering</p>
+
+      <article id="sum">
+        <p class="placeholder">Udfyld formularen og du vil straks få svar over besked</p>
+
+        <div>
+          <p>Dit fornavn: <span id="first_name_output"></span></p>
+          <p>Dit efternavn: <span id="last_name_output"></span></p>
+          <p>Dit telefonnummer: <span id="mobile_output"></span></p>
+          <p>Terms accepted: <span id="terms_output"></span></p>
+        </div>
       </article>
+
+
     </section>
+
+
+
+
+
+
+
+
+
+
   </main>
   <footer>
     <nav class="some">
       <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="instruction.html">Sulten NU?</a></li>
+        <li><a href="register.html">Få hjælp her</a></li>
       </ul>
+
     </nav>
     <nav class="another">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
+      <p>Kontakt: Akutmadhjælp@gmail.dk</p>
+
     </nav>
     <nav class="yetanother">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
+      by Louise Simonsen
+
     </nav>
   </footer>
   <script src="js/burger.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/form.js"></script>
+  <script src="js/mode.js"></script>
 </body>
 
 </html>
