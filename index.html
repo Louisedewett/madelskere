@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/burger.css" />
   <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/infographic.css" />
   <link rel="icon" type="image/png" href="img/fav.png" />
   <title>Emergency Site</title>
 </head>
@@ -20,11 +22,15 @@
   <header>
     <nav>
       <div id="logotype-wrapper" class="logo">
-        <a href="index.html"> LOGO-TYPE </a>
+        <a href="index.html"><img src="overskift_2.svg" alt=""></a>
+
       </div>
       <ul class="menu">
-        <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-        <li><a class="menuItem" href="register.html">Indberet</a></li>
+        <button id="toggle">Knap</button>
+
+        <li><a class="menuItem" href="instruction.html">Sulten NU?</a></li>
+        <li><a class="menuItem" href="register.html">Få hjælp her</a></li>
+
       </ul>
       <button class="burger">
         <span class="line"></span>
@@ -35,88 +41,196 @@
   </header>
   <section id="main-disclamer">
     <div id="main-disclamer-content">
-      <img src="warning" alt="ICON" />
+
+      <img class="billede1" src="figur_2.svg" alt="billede">
       <div>
-        <h1>OVERSKRIFT</h1>
-        <p class="sub">Underrubrik</p>
+
+        <h1>HVOR SKAL JEG TAGE HEN OG SPISE?</h1>
+
+        <p class="sub"> På denne side vil du få den bedste guide så du ikke skal sulte.</p>
       </div>
     </div>
   </section>
   <main>
     <section id="daily">
       <article class="daily_card">
-        <img src="" alt="teaser_img" />
+        <img src="hotspotsdame.png" alt="teaser_img" />
         <div class="daily_text">
-          <h2>Teaser</h2>
+          <h2>Sulten NU?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            magnam ducimus ea, sed minima asperiores.
+            Du kender det selv, du er ude og shoppe, armene er fulde af poser, og energien begynder at dale. Efter et
+            par timer
+            begynder maven at rumle, og det store spørgsmål melder sig: Hvor skal jeg tage hen og spise?
+            -Du er sulten, ikke bare lidt men hangry.
+
+            Find blot løsningen med et enkelt klik nedenunder.
+
           </p>
-          <a href="" class="cta_btn">Se mere</a>
+          <a href="instruction.html" class="cta_btn">Se mere</a>
         </div>
       </article>
       <article class="daily_card">
-        <img src="" alt="teaser_img" />
+        <img src="checkliste.png" alt="teaser_img" />
         <div class="daily_text">
-          <h2>Teaser</h2>
+          <h2>Få hjælp til din sult
+          </h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            magnam ducimus ea, sed minima asperiores.
+            Udfyld et par hurtige felter - og så du klar til at få hjælp til hvor du skal spise henne - helt uden stress
+            og besvær.
+            Din madoplevelse starter her.
           </p>
-          <a href="" class="cta_btn">Se mere</a>
+          <a href="register.html" class="cta_btn">Se mere</a>
         </div>
       </article>
     </section>
+
+
+
+
+
+
+
+
     <section id="breaking">
       <article class="news_card">
-        <h3>Nyhed</h3>
-        <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-        <img src="" alt="news_img" />
-        <a class="cta_btn" href="">Læs mere</a>
+        <h3>Sammenhæng mellem dit humør og valg af mad?</h3>
+        <p>Forskning viser: “Vælg ikke salat, når du er sur – det kan ødelægge hele din aften!”</p>
+        <img src="spisning.png" alt="news_img">
+
+
+        <div popover id="dialog1">
+          <h3>Sammenhæng mellem dit humør og valg af mad?</h3>
+          <h4>Forskning viser: “Vælg ikke salat, når du er sur – det kan ødelægge hele din aften!”</h4>
+
+
+          <img src="spisning.png" alt="spisebillede">
+          <p>En ny undersøgelse fra det fiktive “Hangry Research Institute” vender op og ned på vores madvaner. Ifølge
+            forskerne
+            afgør dit humør, hvad du burde spise til aftensmad.
+            Er du let irriteret, bør du vælge pasta. Hvis du er rasende sulten, skal der en burger til – og er du i
+            decideret
+            krisehumør, er sushi den eneste redning.
+            Eksperterne kalder fænomenet emotionel menuplanlægning og advarer mod at tage forhastede madbeslutninger.
+            “Et forkert
+            valg – som fx salat i vrede – kan forværre dit humør markant,” siger forskningslederen bag studiet.
+            -Det er nu slut med at rende rundt som en forvirret hørne du kan blot mærke efter hvilket humør du er i og
+            så er din
+            beslutning om hvad og hvor du skal spise løst.</p>
+          <button popovertarget="dialog1" class="close_btn1">Luk nyhed</button>
+
+        </div>
+        <button popovertarget="dialog1" class="cta_btn">Læs mere</button>
+
       </article>
+
+
+
+
       <article class="news_card">
-        <h3>Nyhed</h3>
-        <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-        <img src="" alt="news_img" />
-        <a class="cta_btn" href="">Læs mere</a>
+        <h3>"Madkrisen raser – beslut dig før du kollapser!"</h3>
+        <p>Madkrisen er ægte! Forvirrende danskere stirrer tomt ind i cafévinduer uden at kunne beslutte sig - pludselig
+          handler
+          det om liv eller død.</p>
+        <img src="madcafe.png" alt="news_img" />
+
+
+        <div popover id="dialog2">
+
+          <h3>"Madkrisen raser – beslut dig før du kollapser!"</h3>
+
+          <h4>Madkrisen er ægte! Forvirrende danskere stirrer tomt ind i cafévinduer uden at kunne beslutte sig -
+            pludselig handler
+            det om liv eller død.</h4>
+
+          <img src="madcafe.png" alt="madcafebillede">
+
+
+
+          <p>Det begynder som en stille sult. Et lille hul i maven. Men få timer senere står tusindvis af danskere
+            dagligt i en
+            livstruende situation: de kan ikke beslutte sig for, hvor de skal spise. En uskyldig frokostpause udvikler
+            sig til en
+            eksistentiel krise, hvor spørgsmålet “hvad skal jeg have af spise og hvor?” Spørgsmålet føles pludselig
+            større end livet
+            selv.
+
+            Ifølge en ny undersøgelse fra Madmyndigheden, lider hver tredje dansker nu af det, eksperterne kalder det
+            beslutningsspisetræthed – en mental tilstand udløst af for mange menukort, madbilleder og sundhedsråd.
+
+            “Vi ser et stigende antal danskere, der simpelthen bryder sammen foran cafevinduer. Hjernen kan ikke klare
+            presset
+            længere,” advarer myndighedens talsmand, Jens Munch, og tilføjer: “Vi opfordrer alle til at tage stilling,
+            før det er
+            for sent.”</p>
+          <button popovertarget="dialog2" class="close_btn2">Luk nyhed</button>
+
+        </div>
+        <button popovertarget="dialog2" class="cta_btn">Læs mere</button>
+
       </article>
+
+
+
       <article class="news_card">
-        <h3>Nyhed</h3>
-        <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-        <img src="" alt="news_img" />
-        <a class="cta_btn" href="">Læs mere</a>
+        <h3>Madmangel bliver til en voldlig sag på Vesterbrogade</h3>
+        <p>Politiet søger flere vidner om overfaldet på Vesterbrogade.</p>
+        <img src="politibil.png" alt="news_img" />
+
+        <div popover id="dialog3">
+
+          <h3>Madmangel bliver til en voldlig sag på Vesterbrogade</h3>
+          <h4>Politiet søger flere vidner om overfaldet på Vesterbrogade.</h4>
+          <img src="politibil.png" alt="politibilbillede">
+          <p>Det, der startede som en helt almindelig eftermiddag på Vesterbrogade 68 i København, udviklede sig sent
+            i aftes til en
+            voldsom hændelse. To personer, der ifølge kilder ikke havde spist i over fem timer, blev centrum for et
+            dramatisk
+            sammenstød, da sulten tog overhånd.
+
+            Ifølge øjenvidner ændrede stemningen sig på få sekunder. “Man kunne se det i deres øjne,” fortæller en
+            chokeret
+            forbipasserende. “De gik fra smågrinende til brølende hangry-raseri på under et halvt minut.”
+
+            Parret forsøgte angiveligt at beslutte sig mellem sushi, burger eller tacos – men hver gang den ene
+            foreslog noget,
+            eksploderede den anden: “DET ER IKKE DET, JEG HAR LYST TIL!” Vidner beskriver en kaotisk scene med høje
+            råb, pegende
+            fingre og et anfald uden lige.
+            Politiet bekræfter, at de blev tilkaldt til stedet og fortsat søger vidner, der kan kaste lys over
+            hændelsesforløbet.
+            Har du set noget? Kontakt politiet straks.</p>
+          <button popovertarget="dialog3" class="close_btn3">Luk nyhed</button>
+
+        </div>
+        <button popovertarget="dialog3" class="cta_btn">Læs mere</button>
+
       </article>
     </section>
+
+
   </main>
 
   <footer>
     <nav class="some">
       <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="instruction.html">Sulten NU?</a></li>
+        <li><a href="register.html">Få hjælp her</a></li>
       </ul>
+
     </nav>
     <nav class="another">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
+      <p>Kontakt: Akutmadhjælp@gmail.dk</p>
+
     </nav>
     <nav class="yetanother">
-      <ul>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-        <li><a href="">link</a></li>
-      </ul>
+      by Louise Simonsen
+
     </nav>
   </footer>
   <script src="js/burger.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/mode.js"></script>
+
 </body>
 
 </html>

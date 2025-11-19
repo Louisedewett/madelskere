@@ -1,20 +1,20 @@
 :root {
   /* Colours */
-  --color-bg: white; /* page background /*
+  --color-bg: light-dark(#f9e1cd, #7a5555); /* page background /*
 
   /* Header */
-  --color-head-bg: red;
+  --color-head-bg: light-dark(#dbb4b4, #533737);
 
   /* Logotype */
-  --color-logotype-bg: rgb(222, 217, 217);
-  --color-text-logotype: rgb(218, 20, 20);
+  --color-logotype-bg: light-dark(#dbb4b4, #533737);
+  --color-text-logotype: rgb(212, 28, 28);
   --font-logotype-size: 1rem;
 
   /* Global menu */
-  --color-menu-bg: rgb(222, 217, 217);
+  --color-menu-bg: light-dark(#dbb4b4, #533737);
   /* Links */
   --color-link-bg: white;
-  --color-link-hover: #fff; /* used */
+  --color-link-hover: rgb(222, 217, 217); /* used */
   --color-link-active: white; /* used */
   --border-radius-links: 1px;
 
@@ -23,7 +23,7 @@
   --font-sub1-size: 1rem;
   --font-h2-size: 1rem;
   --font-h3-size: 1rem;
-  --color-headline-bg: rgb(208, 23, 23);
+  --color-headline-bg: light-dark(#ffb46f, #a95909);
   --color-headline-text-page: white;
 
   /* Tekst */
@@ -63,7 +63,15 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: rgb(102, 69, 69);
+  --color-info-bg: rgb(160, 115, 115);
   --color-infobox-1-bg: rgb(222, 217, 217);
   --color-infobox-2-bg: rgb(222, 217, 217);
+}
+
+html {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
 }
